@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css2/bootstrap.css">
+    <link rel="stylesheet" href="comparison.css">
+    <link rel="shortcut icon" href="images/title-logo.png">
+    <title>Comparison</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark nav-1 fixed-top" style="background-color: #0f0c29;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="images/logo3.png" alt="" class="img-fluid" style="width: 12%;"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item pt-1">
+                <a class="nav-link lightbutton" aria-current="page" href="index.html">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Home</a>
+              </li>
+              <li class="nav-item pt-1">
+                <a class="nav-link  lightbutton" href="contact.html">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Contact Us</a>
+              </li>
+              <li class="nav-item pt-1">
+                <a class="nav-link lightbutton" href="about.html">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  About Us</a>
+              </li>
+              <li class="nav-item pt-1">
+                <a class="nav-link active lightbutton" href="comparison.html">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Comparison</a>
+              </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+    <div class="container mt-5 mb-5">
+        <div class="row" style="margin-top: 100px;">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                    <select name="" id="brand1" class="form-select" onchange="selectbrand()">
+                        <option>select</option>
+                        <option>canon</option>
+                        <option>sony</option>
+                        <option>panasonic</option>
+                    </select>
+                    <select name="" id="product1" class="form-select mt-3" onchange="selectproduct()" > </select>
+                    <div class="card" id="card1"></div>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- ////////////////second col///////////////////////////////////////// -->
+
+
+
+
+
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="form-group">
+                    <select name="" id="brand2" class="form-select" onchange="selectbrand1()">
+                        <option>select</option>
+                        <option>canon</option>
+                        <option>sony</option>
+                        <option>panasonic</option>
+                    </select>
+                    <select name="" id="product2" class="form-select mt-3" onchange="selectproduct1()" > </select>
+                    <div class="card" id="card2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+    <script>
+
+        function selectbrand(){
+            var brand = document.getElementById("brand1").value;
+            var products = document.getElementById("product1");
+
+            switch (brand) {
+                case "canon" : products.innerHTML =`
+                <option>select</option>
+                <option>Canon EOS Rebel T7</option>
+                <option>Canon EOS M50 Mark II</option>
+                <option>Canon PowerShot</option>
+                `
+                break
+
+                case "sony" : products.innerHTML =`
+                <option>select</option>
+                <option>Sony ZV-1 Digital Camera</option>
+                <option>Sony ZV-1F Vlog Camera</option>
+                <option>Sony Alpha 7 IV</option>
+                `
+                break
+
+                case "panasonic" : products.innerHTML =`
+                <option>select</option>
+                <option>Panasonic LUMIX FZ300</option>
+                <option>Panasonic LUMIX FZ80</option>
+                <option>LUMIX GH5M2</option>
+                `
+                break
+            }
+            
+            
+        }
+
+        function selectproduct(){
+            var products = document.getElementById("product1").value;
+            var cards = document.getElementById("card1");
+
+            switch (products){
+                case "Canon EOS Rebel T7" : cards.innerHTML=`
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/COMPARISON-IMAGES/c1.png" alt="" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                        <ul>
+                        <li>24.1 Megapixel CMOS (APS-C) sensor with is 100–6400 (H: 12800)</li>
+                        <li>Built-in Wi-Fi and NFC technology</li>
+                        <li>9-Point AF system and AI Servo AF</li>
+                        <li>Optical Viewfinder with approx 95% viewing coverage </li>
+                        <li>Use the EOS Utility Webcam Beta Software (Mac and Windows) to turn your compatible Canon camera into a high-quality webcam. Compatible Lenses- Canon EF Lenses (including EF-S lenses, excluding EF-M lenses)</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                       Price=$479.00
+                    </div>
+                </div>
+                `
+                break
+
+                case "Canon EOS M50 Mark II" : cards.innerHTML=`
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/COMPARISON-IMAGES/c2.png" alt="" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                        <ul>
+                            <li>24.1 megapixel (aps-c) cmos sensor with iso 100-25600 (h: 51200). </li>
+                            <li>Digic 8 image processor with auto lighting optimizer.</li>
+                            <li>Improved dual pixel cmos af and eye detection af (still/movie servo af support).</li>
+                            <li>4k uhd 24p and hd 120p for slow motion.</li>
+                            <li>Vari-angle touchscreen lcd convenient for vlogging and various composition.</li>
+                            <li>Lens type: Zoom</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                       Price=$699.00
+                    </div>
+                </div>
+                `
+                break
+
+                case "Canon PowerShot" : cards.innerHTML=`
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/COMPARISON-IMAGES/c3.png" alt="" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                        <ul>
+                            <li>The advanced video capabilities of the PowerShot G7 X Mark II camera can capture moments in the quality they deserve
+                            </li>
+                            <li>An aperture value of f/1.8 at the wide angle and f/2.8 when fully zoomed to a factor of 4.2x (24-100 millimeter), this lens equipped to capture a variety of situations with precision
+                            </li>
+                            <li>High resolution, 3.0 inches LCD monitor that tilts up 180 degrees and down 45 degrees is ideal for self portraits.
+                            </li>
+                            <li>Built in WiFi for on the go convenience and the ability to easily post your images to select social networking and media sites
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                       Price=$629.00
+                    </div>
+                </div>
+                `
+                break
+
+                case "Sony ZV-1 Digital Camera" : cards.innerHTML=`
+                <div class="card">
+                    <div class="card-header">
+                        <img src="images/COMPARISON-IMAGES/s1.png" alt="" class="img-fluid card-img-top">
+                    </div>
+                    <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                        <ul>
+                            <li>20.1MP stacked back illuminated 1” Exmor RS CMOS sensor w/ DRAM. Large aperture 24-70mm1 F1.8-2.8 ZEISS Vario-Sonnar T lens</li>
+                            <li>Fast Hybrid Autofocus and Real Time Eye Autofocus and Real-time Autofocus tracking.</li>
+                            <li>Side flip-out 3.0” LCD screen that also tilts up and down for easier to compose selfie shots</li>
+                           <li>Quickly switch between two modes of defocused background bokeh</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                       Price=$748.00
+                    </div>
+                </div>
+                `
+                break
+
+                case "Sony ZV-1F Vlog Camera" : cards.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/s2.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>Ultra-wide 20mm* lens gets it all in the frame, even at arm’s length</li>
+                                <li>Large 1” sensor and F2 lens, for low-light and defocusing backgrounds</li>
+                                <li>Stay focused with Eye-AF* and autofocus tracking technology</li>
+                                <li>Side-articulating touchscreen LCD for easy to compose selfie shots</li>
+                                <li>Clear Voice with directional 3-Capsule mic and wind screen accessory4</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$498.00
+                        </div>
+                     </div>
+                `
+                break
+
+                case "Sony Alpha 7 IV" : cards.innerHTML=`
+                     <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/s3.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>33MP full-frame Exmor R back-illuminated CMOS sensor</li>
+                                <li>8x more powerful, next generation BIONZ XR image processing engine</li>
+                                <li>Up to 4K 60p 10-bit 4:2:2 w/ full pixel readout in all recording formats</li>
+                                <li>7K oversampling full-frame 4K 30p 10-bit 4:2:2 w/ no pixel binning</li>
+                                <li>Beautiful color expression made simple with S-Cinetone color profile</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                             Price=2,698.00
+                        </div>
+                    </div>
+                `
+                break
+
+                case "Panasonic LUMIX FZ300" : cards.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/pic1.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>4K video and 4K photo: Panasonic’s exclusive 4K photo technology uses 30 frames per second in high resolution 4K ultra HD video to extract them as photos; You’ll never miss that moment again</li>
+                            <li>Leica DC Vario Elmarit lens: 24x zoom (25 600 millimeter with Full zoom range F2; </li>
+                            <li>Rugged Camera Design: Splash Proof/dustproof rugged camera design with tight seals on every Joint, dial and button, so it stands up to harsh weather conditions and challenging</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$447.99
+                        </div>
+                    </div>
+                `
+                break
+
+                case "Panasonic LUMIX FZ80" : cards.innerHTML=`
+                     <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/pic2.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>Point and Shoot Long Zoom Camera: 18.1 megapixel MOS sensor plus 60X zooms DC Vario lens (20 1220 millimeter and Power O.I.S. </li>
+                                <li>High Resolution View Finder and LCD Display: High resolution 1,170K dot view finder and rear touch enabled 3 inch LCD Display (1040 dots) are clear even in bright sunlight. Lens:14 elements in 12 groups</li>
+                                <li>Viewfinder: 0.20" LVF (Live View Finder) (1,166k dots equiv.), Field of View: Approx. 100%, Lens 19.6x</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$397.99
+                        </div>
+                    </div>
+                `
+                break
+
+                case "LUMIX GH5M2" : cards.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/pic3.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>PHOTO STYLE PRESETS MINIMIZE YOUR EDITING: Presets include V-LogL, Cinelike D2/ V2, MonochromeS and L.ClassicNeo.</li>
+                                <li>POWERFUL IMAGE STABILIZATION: Advanced I.S. to 6.5-stop slower shutter speeds for stable handheld shooting. Double SD Memory Card slot for relay recording.</li>
+                                <li>WITHSTANDS HEAVY FIELD USE: The magnesium alloy full die-cast front / rear frame and is not only splash and dust resistant, but also freezeproof down to -10 °C (14°F).</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                         Price=$1,997.99
+                        </div>
+                    </div>
+                `
+                break
+            }
+        }
+
+
+
+
+
+        //////////////////////////////////////////recond col js/////////////////////
+        
+
+
+
+
+        function selectbrand1(){
+                var brand0 = document.getElementById("brand2").value;
+                var products0 = document.getElementById("product2");
+    
+                switch (brand0) {
+                    case "canon" : products0.innerHTML =`
+                    <option>select</option>
+                    <option>Canon EOS Rebel T7</option>
+                    <option>Canon EOS M50 Mark II</option>
+                    <option>Canon PowerShot</option>
+                    `
+                    break
+    
+                    case "sony" : products0.innerHTML =`
+                    <option>select</option>
+                    <option>Sony ZV-1 Digital Camera</option>
+                    <option>Sony ZV-1F Vlog Camera</option>
+                    <option>Sony Alpha 7 IV</option>
+                    `
+                    break
+    
+                    case "panasonic" : products0.innerHTML =`
+                    <option>select</option>
+                    <option>Panasonic LUMIX FZ300</option>
+                    <option>Panasonic LUMIX FZ80</option>
+                    <option>LUMIX GH5M2</option>
+                    `
+                    break
+                }
+                
+                
+            }
+    
+            function selectproduct1(){
+                var products0 = document.getElementById("product2").value;
+                var cards0 = document.getElementById("card2");
+    
+                switch (products0){
+                    case "Canon EOS Rebel T7" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/c1.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                            <li>24.1 Megapixel CMOS (APS-C) sensor with is 100–6400 (H: 12800)</li>
+                            <li>Built-in Wi-Fi and NFC technology</li>
+                            <li>9-Point AF system and AI Servo AF</li>
+                            <li>Optical Viewfinder with approx 95% viewing coverage </li>
+                            <li>Use the EOS Utility Webcam Beta Software (Mac and Windows) to turn your compatible Canon camera into a high-quality webcam. Compatible Lenses- Canon EF Lenses (including EF-S lenses, excluding EF-M lenses)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$479.00
+                        </div>
+                    </div>
+                    `
+                    break
+    
+                    case "Canon EOS M50 Mark II" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/c2.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>24.1 megapixel (aps-c) cmos sensor with iso 100-25600 (h: 51200). </li>
+                                <li>Digic 8 image processor with auto lighting optimizer.</li>
+                                <li>Improved dual pixel cmos af and eye detection af (still/movie servo af support).</li>
+                                <li>4k uhd 24p and hd 120p for slow motion.</li>
+                                <li>Vari-angle touchscreen lcd convenient for vlogging and various composition.</li>
+                                <li>Lens type: Zoom</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$699.00
+                        </div>
+                    </div>
+                    `
+                    break
+    
+                    case "Canon PowerShot" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/c3.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>The advanced video capabilities of the PowerShot G7 X Mark II camera can capture moments in the quality they deserve
+                                </li>
+                                <li>An aperture value of f/1.8 at the wide angle and f/2.8 when fully zoomed to a factor of 4.2x (24-100 millimeter), this lens equipped to capture a variety of situations with precision
+                                </li>
+                                <li>High resolution, 3.0 inches LCD monitor that tilts up 180 degrees and down 45 degrees is ideal for self portraits.
+                                </li>
+                                <li>Built in WiFi for on the go convenience and the ability to easily post your images to select social networking and media sites
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$629.00
+                        </div>
+                    </div>
+                    `
+                    break
+
+                    case "Sony ZV-1 Digital Camera" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/s1.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                            <li>20.1MP stacked back illuminated 1” Exmor RS CMOS sensor w/ DRAM. Large aperture 24-70mm1 F1.8-2.8 ZEISS Vario-Sonnar T lens</li>
+                            <li>Fast Hybrid Autofocus and Real Time Eye Autofocus and Real-time Autofocus tracking.</li>
+                            <li>Side flip-out 3.0” LCD screen that also tilts up and down for easier to compose selfie shots</li>
+                            <li>Quickly switch between two modes of defocused background bokeh</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                         Price=$748.00
+                        </div>
+                    </div>
+                    `
+                    break
+    
+                    case "Sony ZV-1F Vlog Camera" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/s2.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>Ultra-wide 20mm* lens gets it all in the frame, even at arm’s length</li>
+                                <li>Large 1” sensor and F2 lens, for low-light and defocusing backgrounds</li>
+                                <li>Stay focused with Eye-AF* and autofocus tracking technology</li>
+                                <li>Side-articulating touchscreen LCD for easy to compose selfie shots</li>
+                                <li>Clear Voice with directional 3-Capsule mic and wind screen accessory4</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$498.00
+                        </div>
+                     </div>
+                    `
+                    break
+    
+                    case "Sony Alpha 7 IV" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/s3.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>33MP full-frame Exmor R back-illuminated CMOS sensor</li>
+                                <li>8x more powerful, next generation BIONZ XR image processing engine</li>
+                                <li>Up to 4K 60p 10-bit 4:2:2 w/ full pixel readout in all recording formats</li>
+                                <li>7K oversampling full-frame 4K 30p 10-bit 4:2:2 w/ no pixel binning</li>
+                                <li>Beautiful color expression made simple with S-Cinetone color profile</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                             Price=2,698.00
+                        </div>
+                    </div>
+                    `
+                    break
+
+                    case "Panasonic LUMIX FZ300" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/pic1.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>4K video and 4K photo: Panasonic’s exclusive 4K photo technology uses 30 frames per second in high resolution 4K ultra HD video to extract them as photos; You’ll never miss that moment again</li>
+                            <li>Leica DC Vario Elmarit lens: 24x zoom (25 600 millimeter with Full zoom range F2;</li>
+                            <li>Rugged Camera Design: Splash Proof/dustproof rugged camera design with tight seals on every Joint, dial and button, so it stands up to harsh weather conditions and challenging</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$447.99
+                        </div>
+                    </div>
+           
+                    `
+                    break
+    
+                    case "Panasonic LUMIX FZ80" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/pic2.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>Point and Shoot Long Zoom Camera: 18.1 megapixel MOS sensor plus 60X zooms DC Vario lens (20 1220 millimeter and Power O.I.S. </li>
+                                <li>High Resolution View Finder and LCD Display: High resolution 1,170K dot view finder and rear touch enabled 3 inch LCD Display (1040 dots) are clear even in bright sunlight. Lens:14 elements in 12 groups</li>
+                                <li>Viewfinder: 0.20" LVF (Live View Finder) (1,166k dots equiv.), Field of View: Approx. 100%, Lens 19.6x</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                            Price=$397.99
+                        </div>
+                    </div>
+                    `
+                    break
+    
+                    case "LUMIX GH5M2" : cards0.innerHTML=`
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="images/COMPARISON-IMAGES/pic3.png" alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="card-body" style="font-size: larger; font-weight: bolder;">
+                            <ul>
+                                <li>PHOTO STYLE PRESETS MINIMIZE YOUR EDITING: Presets include V-LogL, Cinelike D2/ V2, MonochromeS and L.ClassicNeo.</li>
+                                <li>POWERFUL IMAGE STABILIZATION: Advanced I.S. to 6.5-stop slower shutter speeds for stable handheld shooting. Double SD Memory Card slot for relay recording.</li>
+                                <li>WITHSTANDS HEAVY FIELD USE: The magnesium alloy full die-cast front / rear frame and is not only splash and dust resistant, but also freezeproof down to -10 °C (14°F).</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer" style="font-size: larger; font-weight: bolder;"> 
+                         Price=$1,997.99
+                        </div>
+                    </div>
+                    `
+                    break
+                }
+            }
+    
+
+
+
+    </script>
+     
+ 
+    
+
+    <script src="js2/bootstrap.bundle.js"></script>
+</body>
+</html>

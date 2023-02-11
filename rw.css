@@ -1,0 +1,7 @@
+.vip:hover, .vip:focus {
+    background-color: #000;
+    color: #fff;
+    transition: 2s;
+    transform: scale(0.9);
+}
+
